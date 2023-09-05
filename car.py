@@ -1,8 +1,8 @@
 class Car:
     def __init__(self):
         self.name = 'Toyota Corolla'
-        print(f'Hello!\nYou just entered an Automatic geared {self.name} car.\nPress ENTER to start the car')
-        self.start()
+        # print(f'Hello!\nYou just entered an Automatic geared {self.name} car.\nPress ENTER to start the car')
+        # self.start()
     
     def drive(self):
         print(f'\nYou are now driving a {self.name} car')
@@ -29,5 +29,12 @@ class Car:
         else:
             Car()
     
+class AnotherCar(Car):
+    def __init__(self):
+        super().__init__()
+        self.name = input('Enter the name of a car: ')
+        print(f'Hello!\nYou just entered an Automatic geared {self.name} car.\nPress ENTER to start the car')
+        self.start()
     
-Car()
+# Car()
+AnotherCar()
